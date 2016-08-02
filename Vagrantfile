@@ -78,7 +78,7 @@ Vagrant.configure("2") do |config|
       echo #{ssh_pub_key} >> /root/.ssh/authorized_keys
 
       echo "Enabling RabbitMQ management console"
-      sudo /usr/lib/rabbitmq/bin/rabbitmq-plugins enable rabbitmq_management rabbitmq_management_agent rabbitmq_management_visualiser
+      sudo /usr/lib/rabbitmq/bin/rabbitmq-plugins enable rabbitmq_management rabbitmq_management_agent rabbitmq_management_visualiser --offline
       sudo service rabbitmq-server restart
     SHELL
   end
